@@ -1,0 +1,29 @@
+{
+  "name": "frontend-web-template",
+  "version": "1.0.0",
+  "description": "Basic Frontend template using Grunt, SCSS and HTML(Strict).",
+  "author": "Kani Robinson",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/KaniRobinson/FrontendDevelopment"
+  },
+  "bugs": {
+    "url": "https://github.com/KaniRobinson/FrontendDevelopment/issues"
+  },
+  "keywords": [
+    "Grunt",
+    "SCSS",
+    "OOJS",
+    "Pugs"
+  ],
+  "devDependencies": {
+    "grunt": "~1.0.1",
+    "grunt-contrib-concat": "~1.0.1",
+    "grunt-sass": "~1.0.0",
+    "grunt-contrib-watch": "~1.0.0",
+    "load-grunt-tasks": "~3.2.0",
+    "grunt-contrib-cssmin": "~1.0.1",
+    "grunt-contrib-uglify": "~1.0.1"
+  }
+}

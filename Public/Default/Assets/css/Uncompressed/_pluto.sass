@@ -1,0 +1,113 @@
+@function multiple-box-shadow ($n) 
+  $value: '#{random(2000)}px #{random(2000)}px #FFF'
+  @for $i from 2 through $n
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF'
+
+  @return unquote($value)
+
+body, html
+    width: 100%
+    height: 100%
+    font-family: 'Open Sans', sans-serif
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)!important
+    margin: 0
+    padding: 0
+    overflow: hidden
+
+h1.plutoTitle
+    text-align: center
+    color: #FFF
+    font-size: 90px
+    font-weight: 300
+    margin-top: 40px
+    strong
+        font-weight: 500
+
+p
+    &:nth-of-type(1)
+        background: transparent
+        width: 1px
+        height: 1px
+        box-shadow: multiple-box-shadow(700)
+        animation : stars 50s linear infinite
+        &:after
+            width: 1px
+            height: 1px
+            box-shadow: multiple-box-shadow(700)
+            content: " "
+            position: absolute
+            top: 2000px
+            background: transparent
+    &:nth-of-type(2)
+        background: transparent
+        width: 2px
+        height: 2px
+        box-shadow: multiple-box-shadow(200)
+        animation : stars 100s linear infinite
+        &:after
+            width: 2px
+            height: 2px
+            box-shadow: multiple-box-shadow(200)
+            content: " "
+            position: absolute
+            top: 2000px
+            background: transparent
+    &:nth-of-type(3)
+        background: transparent
+        width: 3px
+        height: 3px
+        box-shadow: multiple-box-shadow(100)
+        animation : stars 150s linear infinite
+        &:after
+            width: 3px
+            height: 3px
+            box-shadow: multiple-box-shadow(100)
+            content: " "
+            position: absolute
+            top: 2000px
+            background: transparent
+
+.pluto
+    width: 200px
+    height: 200px
+    background: #e6b98b
+    border-radius: 50%
+    margin: 0 auto
+    margin-top: 5%
+    box-shadow: inset #c9a27a -10px -9px 0px
+    position: relative
+    &:before
+        content: ""
+        position: absolute
+        width: 130px
+        height: 130px
+        background: rgba(0, 0, 0, 0.1)
+        top: 170px
+        left: 35px
+        border-radius: 50%
+        opacity: 0
+    .meteor-spot, &:nth-of-type(2), &:nth-of-type(3)
+        width: 20px
+        height: 20px
+        background: #C9A27A
+        position: absolute
+        top: 40px
+        left: 70px
+        border-radius: 50px
+        box-shadow: inset #AE8B68 2px 2px 0px
+        &:nth-of-type(2)
+            top: 67px
+            left: 70px
+            width: 30px
+            height: 30px
+        &:nth-of-type(3)
+            top: 60px
+            left: 45px
+            width: 20px
+            height: 20px
+
+@keyframes stars
+  from  
+    transform: translateY(0px)
+  to        
+    transform: translateY(-2000px)

@@ -1,0 +1,25 @@
+@mixin noMargin()
+  margin: 0
+@mixin borderRadius($radius)
+  border-radius: $radius
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  -o-border-radius: $radius
+@mixin transition($type, $time, $effect)
+  -webkit-transition: $type, $time, $effect
+  -moz-transition: $type, $time, $effect
+  -ms-transition: $type, $time, $effect
+  -o-transition: $type, $time, $effect
+  transition: $type, $time, $effect
+@mixin boxShadow($top, $left, $blur, $color)
+  -webkit-box-shadow: $top $left $blur $color
+  -moz-box-shadow: $top $left $blur $color
+  box-shadow: $top $left $blur $color
+@mixin clearfix()
+  &:before,
+  &:after
+    content: ""
+    display: table
+  &:after
+    clear: both
